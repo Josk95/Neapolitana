@@ -17,7 +17,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{113BB64C-0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neapolitana.Core.Lib", "Neapolitana.Core.Lib\Neapolitana.Core.Lib.csproj", "{758762DD-A68E-46AC-8620-CBB017E6E0F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neapolitana.Web", "Neapolitana.Web\Neapolitana.Web.csproj", "{6AB02563-D0C4-48DB-9A00-9B58605C5FB5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neapolitana.Web", "Neapolitana.Web\Neapolitana.Web\Neapolitana.Web.csproj", "{158FC75C-DE54-45C6-8DCB-D34CF22A4B0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neapolitana.Web.Client", "Neapolitana.Web\Neapolitana.Web.Client\Neapolitana.Web.Client.csproj", "{636198AE-0C7B-4695-AD34-D76AF9171E23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,10 +35,14 @@ Global
 		{758762DD-A68E-46AC-8620-CBB017E6E0F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{758762DD-A68E-46AC-8620-CBB017E6E0F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{758762DD-A68E-46AC-8620-CBB017E6E0F6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6AB02563-D0C4-48DB-9A00-9B58605C5FB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6AB02563-D0C4-48DB-9A00-9B58605C5FB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6AB02563-D0C4-48DB-9A00-9B58605C5FB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6AB02563-D0C4-48DB-9A00-9B58605C5FB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{158FC75C-DE54-45C6-8DCB-D34CF22A4B0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{158FC75C-DE54-45C6-8DCB-D34CF22A4B0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{158FC75C-DE54-45C6-8DCB-D34CF22A4B0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{158FC75C-DE54-45C6-8DCB-D34CF22A4B0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{636198AE-0C7B-4695-AD34-D76AF9171E23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{636198AE-0C7B-4695-AD34-D76AF9171E23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{636198AE-0C7B-4695-AD34-D76AF9171E23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{636198AE-0C7B-4695-AD34-D76AF9171E23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,7 +50,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{8ACF5F18-ED28-4F4B-8035-043AA5AEA186} = {2D87E863-3BE2-4DF0-9E4A-C94B2D6163F9}
 		{758762DD-A68E-46AC-8620-CBB017E6E0F6} = {113BB64C-0D72-4E24-B9BE-92A8D4961175}
-		{6AB02563-D0C4-48DB-9A00-9B58605C5FB5} = {B1A569B7-4095-4B09-8BBF-C0BB9D22A2E1}
+		{158FC75C-DE54-45C6-8DCB-D34CF22A4B0F} = {B1A569B7-4095-4B09-8BBF-C0BB9D22A2E1}
+		{636198AE-0C7B-4695-AD34-D76AF9171E23} = {B1A569B7-4095-4B09-8BBF-C0BB9D22A2E1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C9F89DC2-6112-493A-8450-AEF55D91DDF1}

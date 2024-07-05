@@ -9,13 +9,13 @@ namespace Neapolitana.Services.CouponAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CouponAPIController : ControllerBase
+    public class CouponController : ControllerBase
     {
         private readonly AppDbContext _db;
         private ResponseDto _responseDto;
         private readonly IMapper _mapper;
 
-        public CouponAPIController(AppDbContext db, IMapper mapper)
+        public CouponController(AppDbContext db, IMapper mapper)
         {
             _db = db;
             _responseDto = new ResponseDto();

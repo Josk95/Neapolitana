@@ -1,0 +1,6 @@
+@Naepolitana.Services.ProductAPI_HostAddress = http://localhost:5063
+
+GET {{Naepolitana.Services.ProductAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

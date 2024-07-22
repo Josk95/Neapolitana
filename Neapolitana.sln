@@ -11,15 +11,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{2D87E863-3BE2-4DF0-9E4A-C94B2D6163F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neapolitana.Services.CouponAPI", "Neapolitana.Services.CouponAPI\Neapolitana.Services.CouponAPI.csproj", "{8ACF5F18-ED28-4F4B-8035-043AA5AEA186}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Neapolitana.Services.CouponAPI", "Neapolitana.Services.CouponAPI\Neapolitana.Services.CouponAPI.csproj", "{8ACF5F18-ED28-4F4B-8035-043AA5AEA186}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{113BB64C-0D72-4E24-B9BE-92A8D4961175}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neapolitana.Core.Lib", "Neapolitana.Core.Lib\Neapolitana.Core.Lib.csproj", "{758762DD-A68E-46AC-8620-CBB017E6E0F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Neapolitana.Core.Lib", "Neapolitana.Core.Lib\Neapolitana.Core.Lib.csproj", "{758762DD-A68E-46AC-8620-CBB017E6E0F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neapolitana.Web", "Neapolitana.Web\Neapolitana.Web\Neapolitana.Web.csproj", "{158FC75C-DE54-45C6-8DCB-D34CF22A4B0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Neapolitana.Web", "Neapolitana.Web\Neapolitana.Web\Neapolitana.Web.csproj", "{158FC75C-DE54-45C6-8DCB-D34CF22A4B0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neapolitana.Web.Client", "Neapolitana.Web\Neapolitana.Web.Client\Neapolitana.Web.Client.csproj", "{636198AE-0C7B-4695-AD34-D76AF9171E23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Neapolitana.Web.Client", "Neapolitana.Web\Neapolitana.Web.Client\Neapolitana.Web.Client.csproj", "{636198AE-0C7B-4695-AD34-D76AF9171E23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naepolitana.Services.ProductAPI", "Naepolitana.Services.ProductAPI\Naepolitana.Services.ProductAPI.csproj", "{A74447AD-E5B6-4448-B8F1-20D3A90C4114}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{636198AE-0C7B-4695-AD34-D76AF9171E23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{636198AE-0C7B-4695-AD34-D76AF9171E23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{636198AE-0C7B-4695-AD34-D76AF9171E23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A74447AD-E5B6-4448-B8F1-20D3A90C4114}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A74447AD-E5B6-4448-B8F1-20D3A90C4114}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A74447AD-E5B6-4448-B8F1-20D3A90C4114}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A74447AD-E5B6-4448-B8F1-20D3A90C4114}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,6 +58,7 @@ Global
 		{758762DD-A68E-46AC-8620-CBB017E6E0F6} = {113BB64C-0D72-4E24-B9BE-92A8D4961175}
 		{158FC75C-DE54-45C6-8DCB-D34CF22A4B0F} = {B1A569B7-4095-4B09-8BBF-C0BB9D22A2E1}
 		{636198AE-0C7B-4695-AD34-D76AF9171E23} = {B1A569B7-4095-4B09-8BBF-C0BB9D22A2E1}
+		{A74447AD-E5B6-4448-B8F1-20D3A90C4114} = {2D87E863-3BE2-4DF0-9E4A-C94B2D6163F9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C9F89DC2-6112-493A-8450-AEF55D91DDF1}

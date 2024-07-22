@@ -4,6 +4,7 @@ using Neapolitana.Services.CouponAPI.Data;
 using Neapolitana.Services.CouponAPI.Models;
 using Neapolitana.Services.CouponAPI.Models.RequestObject;
 using Neapolitana.Services.CouponAPI.Models.ResponseObjects;
+using Stripe;
 
 namespace Neapolitana.Services.CouponAPI.Controllers
 {
@@ -14,6 +15,7 @@ namespace Neapolitana.Services.CouponAPI.Controllers
         private readonly AppDbContext _db;
         private ResponseDto _responseDto;
         private readonly IMapper _mapper;
+        
 
         public CouponController(AppDbContext db, IMapper mapper)
         {
@@ -28,7 +30,7 @@ namespace Neapolitana.Services.CouponAPI.Controllers
         {
             try
             {
-                IEnumerable<Coupon> coupons = _db.Coupons.ToList();
+                IEnumerable<Models.Coupon> coupons = _db.Coupons.ToList();
                 _responseDto.Result = _mapper.Map<IEnumerable<CouponResponse>>(coupons);
 
                 return Ok(_responseDto);
@@ -86,10 +88,26 @@ namespace Neapolitana.Services.CouponAPI.Controllers
         {
             try
             {
-                var coupon = _mapper.Map<Coupon>(request);
+                var coupon = _mapper.Map<Models.Coupon>(request);
 
                 _db.Coupons.Add(coupon);
                 _db.SaveChanges();
+                #region STRIPE
+                // Sync coupon to stripe
+                StripeConfiguration.ApiKey = "sk_test_51Pf2SXK4vtXgAaTF2d27sMpJGl3e9pYfggaRtHaVWuHYEJdlbtl3jzTZrW84WZBNdrZbuN0fUguhqM9IzdoEXY1100UYd6xIip";
+                var options = new CouponCreateOptions
+                {
+                    PercentOff = (decimal)request.Discount,
+                    Currency = "sek",
+                    Id = coupon.Code
+
+                };
+
+                var service = new CouponService();
+                //service.Create(options);
+
+
+                #endregion
 
                 _responseDto.Result = _mapper.Map<CouponResponse>(coupon);
 
@@ -109,7 +127,7 @@ namespace Neapolitana.Services.CouponAPI.Controllers
         {
             try
             {
-                var coupon = _mapper.Map<Coupon>(request);
+                var coupon = _mapper.Map<Models.Coupon>(request);
                 coupon.Id = id;
 
                 _db.Coupons.Update(coupon);
@@ -127,17 +145,28 @@ namespace Neapolitana.Services.CouponAPI.Controllers
             }
         }
 
-        //[HttpDelete] - Update Coupon
         [HttpDelete]
         [Route("{id:int}")]
         public ActionResult<ResponseDto> Delete(int id)
         {
             try
             {
-                Coupon coupon = _db.Coupons.First(x => x.Id == id);
+                Models.Coupon coupon = _db.Coupons.First(x => x.Id == id);
 
                 _db.Coupons.Remove(coupon);
                 _db.SaveChanges();
+
+                var service = new CouponService();
+
+                try
+                {
+                    service.Delete(coupon.Code);
+                }
+                catch (Exception ex)
+                {
+
+                    Console.WriteLine(ex);
+                }
 
 
                 return Ok(_responseDto);

@@ -1,0 +1,6 @@
+@Naepolitana.Services.OrderAPI_HostAddress = http://localhost:5229
+
+GET {{Naepolitana.Services.OrderAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

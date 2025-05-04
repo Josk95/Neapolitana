@@ -28,10 +28,10 @@ namespace Naepolitana.Services.OrderAPI.Controllers
         }
 
         //Get Order Admin gets all. User gets users orders
-        //Get Orde By Id
+        //Get Order By Id
+        
+        
         //Create Order
-
-
         [HttpPost("CreateOrder")]
         public async Task<ResponseDto> CreateOrder([FromBody] CartRequest cartRequest)
         {

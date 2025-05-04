@@ -104,7 +104,7 @@ namespace Neapolitana.Services.CouponAPI.Controllers
                 };
 
                 var service = new CouponService();
-                //service.Create(options);
+                service.Create(options);
 
 
                 #endregion
